@@ -21,11 +21,7 @@ class FullPaths(Action):
 
 def is_dir(dir_name):
     """Checks if a path is an actual directory"""
-    if not os.path.isdir(dir_name):
-        msg = "{0} is not a directory".format(dir_name)
-        raise ArgumentTypeError(msg)
-    else:
-        return dir_name
+    pass
 
 
 def create_parser(args):

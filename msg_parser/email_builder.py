@@ -135,19 +135,4 @@ def flatten_list(string_list):
 
 
 def normalize(input_str):
-    if not input_str:
-        return input_str
-    try:
-        if isinstance(input_str, list):
-            input_str = [s.decode("ascii") for s in input_str]
-        else:
-            input_str.decode("ascii")
-        return input_str
-    except UnicodeError:
-        if isinstance(input_str, bytes):
-            input_str = input_str.decode("utf-8", "ignore")
-        normalized = unicodedata.normalize("NFKD", input_str)
-        if not normalized.strip():
-            normalized = input_str.encode("unicode-escape").decode("utf-8")
-
-        return normalized
+    pass
